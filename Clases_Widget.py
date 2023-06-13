@@ -26,7 +26,6 @@ class Colocar_Boton:
         self.tipo_boton = tipo_boton
         self.borde_boton = borde_boton
         self.comando = comando
-        self.crear_boton()
     
     def crear_boton(
         self
@@ -55,7 +54,7 @@ class Colocar_Boton:
             ,expand = False
         )
 
-class Colocar_Etiqueta:
+class Etiqueta:
     def __init__(self
         ,ventana
         ,texto
@@ -76,12 +75,11 @@ class Colocar_Etiqueta:
         self.alto_etiqueta = alto_etiqueta
         self.tipo_etiqueta = tipo_etiqueta
         self.borde_etiqueta = borde_etiqueta
-        self.crear_etiqueta()
 
     def crear_etiqueta(
         self
     ):
-        etiqueta = tk.Label(
+        self.etiqueta = tk.Label(
             self.ventana
             ,text = self.texto
             ,bg = self.color_fondo
@@ -94,7 +92,7 @@ class Colocar_Etiqueta:
             ,wraplength=100
         )
 
-        etiqueta.pack(
+        self.etiqueta.pack(
             side = tk.LEFT
             ,padx = 5
             ,pady = 5
@@ -103,6 +101,12 @@ class Colocar_Etiqueta:
             ,fill = tk.NONE
             ,expand = False
         )
+    
+    def eliminar_etiqueta(
+        self
+    ):
+        if self.etiqueta.winfo_exist():
+            self.etiqueta.destroy()
 
 class Colocar_Entrada:
     def __init__(self,
@@ -115,7 +119,6 @@ class Colocar_Entrada:
         self.text = text
         self.tipo_letra_entrada = tipo_letra_entrada
         self.ancho_entrada = ancho_entrada
-        self.crear_entrada()
     
     def crear_entrada(
         self
