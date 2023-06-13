@@ -3,7 +3,8 @@ import tkinter as tk
 # Clase Boton Para crear un Boton
 
 class Colocar_Boton:
-    def __init__(self
+    def __init__(
+        self
         ,ventana
         ,texto
         ,color_fondo
