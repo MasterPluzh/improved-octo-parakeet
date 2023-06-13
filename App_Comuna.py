@@ -41,7 +41,8 @@ def ventana_menu():
     ventana.title("Menu de Incio")
     ventana.geometry("250x300+550+100")
 
-    frame = tk.Frame(ventana), frame.pack(side=tk.TOP)
+    frame = tk.Frame(ventana)
+    frame.pack(side=tk.TOP)
 
     boton_opcion_consejo_comunal = Colocar_Boton(
         frame
@@ -51,17 +52,19 @@ def ventana_menu():
         ,lambda: ventana_control_opciones(1)
         )
 
-    frame = tk.Frame(ventana), frame.pack(side=tk.TOP)
+    frame = tk.Frame(ventana)
+    frame.pack(side=tk.TOP)
 
     boton_opcion_vocero = Colocar_Boton(
         frame
         ,"Voceros"
         ,"blue"
         ,"yellow"
-        ,lambda: ventana_control_opciones(1)
+        ,lambda: ventana_control_opciones(2)
         )
 
-    frame = tk.Frame(ventana), frame.pack(side=tk.TOP)
+    frame = tk.Frame(ventana)
+    frame.pack(side=tk.TOP)
 
     boton_salir = Colocar_Boton(
         frame
@@ -84,10 +87,11 @@ def ventana_control_opciones(consejo_or_vocero):
     # ventana.title("Control de Voceros")
     ventana.geometry("400x300+475+100")
 
-    frame_1 = tk.Frame(ventana),frame_1.pack(side=tk.TOP)
+    frame = tk.Frame(ventana)
+    frame.pack(side=tk.TOP)
 
     boton_opcion_agregar = Colocar_Boton(
-        frame_1
+        frame
         ,"Agregar"
         ,"white"
         ,"black"
@@ -95,18 +99,18 @@ def ventana_control_opciones(consejo_or_vocero):
         )
 
     boton_opcion_quitar = Colocar_Boton(
-        frame_1
+        frame
         ,"Quitar"
         ,"white"
         ,"black"
         ,None
         )
 
-    frame_2 = tk.Frame(ventana)
-    frame_2.pack(side=tk.TOP)
+    frame = tk.Frame(ventana)
+    frame.pack(side=tk.TOP)
 
     boton_opcion_editar = Colocar_Boton(
-        frame_2
+        frame
         ,"Editar"
         ,"white"
         ,"black"
@@ -114,17 +118,18 @@ def ventana_control_opciones(consejo_or_vocero):
         )
 
     boton_opcion_consultar = Colocar_Boton(
-        frame_2
+        frame
         ,"Consultar"
         ,"white"
         ,"black"
         ,None
         )
 
-    frame_3 = tk.Frame(ventana),frame_3.pack(side=tk.TOP)
+    frame = tk.Frame(ventana)
+    frame.pack(side=tk.TOP)
 
     boton_opcion_mostrar = Colocar_Boton(
-        frame_3
+        frame
         ,"Mostrar"
         ,"white"
         ,"black"
@@ -132,7 +137,7 @@ def ventana_control_opciones(consejo_or_vocero):
         )
 
     boton_opcion_volver = Colocar_Boton(
-        frame_3
+        frame
         ,"Volver"
         ,"white"
         ,"black"
